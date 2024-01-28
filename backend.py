@@ -19,7 +19,7 @@ def get_data(name, days, kind):
         # final_data = [item["main"]["temp"] for item in filtered_data]
     else:
         for item in filtered_data:
-            final_data.append(str(item["weather"][0]['description']))
+            final_data.append(str(item["weather"][0]['main']))
             data_dates.append(str(item["dt_txt"]))
         # final_data = [item["weather"][0]["description"] for item in filtered_data]
     return final_data, data_dates
